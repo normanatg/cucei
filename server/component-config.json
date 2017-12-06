@@ -1,0 +1,11 @@
+{
+  "loopback-component-explorer": {
+    "mountPath": "/explorer"
+  },
+  "loopback-component-jsonapi":{
+  	"exclude": [
+      {"methods": "denuncia"},
+      {"model": "post", "methods": "denuncia"}
+    ]
+  }
+}
