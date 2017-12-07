@@ -1,0 +1,22 @@
+<div id="login" layout="row" layout-align="center center">
+    <div class="login-side" layout="column" layout-align="center center">
+        <img src="/assets/images/logo-cucei.svg">
+        <div class="login-box">
+            <span ng-if="errorMessage" class="error-message">{{errorMessage}}</span>
+            <form>
+                <md-input-container md-no-float class="md-block">
+                    <input type="text" ng-model="codigo" placeholder="Codigo"/>
+                </md-input-container>
+                <md-input-container md-no-float class="md-block">
+                    <input type="password" ng-model="password" placeholder="Contraseña"/>
+                </md-input-container>
+                <md-button ng-click="login()" class="login-button md-raised md-block md-primary">
+                    ENTRAR
+                </md-button>
+            </form>
+            <div class="login-link">
+                <a ui-sref="recoverPassword">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+    </div>
+</div>

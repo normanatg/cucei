@@ -1,0 +1,21 @@
+<div hide="true" show-gt-xs="true" style="overflow:scroll; height: 100vh;">
+    <div class="logo" layout layout-align="center center">
+        <img src="/assets/images/logo.png" height="70%">
+    </div>
+    <md-button ng-repeat="item in menu" class="menu-button" >
+        <md-menu>
+            <div layout="column" layout-align="center center" ng-click="navigate($mdOpenMenu,item)">
+                <div layout layout-align="center center">
+                    <i class="fa {{item.icon}}"></i>
+                </div>
+                <span>{{item.title}}</span>
+            </div>
+
+            <md-menu-content width="4">
+                <md-menu-item ng-repeat="option in item.options">
+                    <md-button ui-sref="{{option.route}}">{{option.label}}</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </md-button>
+</div>

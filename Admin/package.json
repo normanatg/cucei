@@ -1,0 +1,29 @@
+{
+  "name": "cuceiadmin",
+  "version": "1.0.0",
+  "description": "Admin ot the cucei",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-change": "^1.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-ng-config": "^1.4.0",
+    "gulp-param": "^1.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-exec": "^2.1.2",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-ng-html2js": "^0.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-shell": "^0.5.1",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5"
+  },
+  "author": "norman404",
+  "license": "ISC"
+}

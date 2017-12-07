@@ -1,0 +1,23 @@
+<div layout>
+    <div id="sidebar" flex="0" flex-gt-xs="10" ng-include="'app/shared/sidebar/sidebar.html'"></div>
+    <md-content id="wrapper" flex="100" flex-gt-xs="90">
+        <div id="header" layout layout-align="start center" class="container">
+            <div hide-gt-xs="true">
+                <md-menu md-offset="0 -7">
+                    <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                       <i class="fa fa-bars" aria-hidden="true"></i>
+                    </md-button>
+                    <md-menu-content width="4">
+                        <md-menu-item ng-repeat="item in menu">
+                            <md-button class="class" ui-sref-opts="{reload: true, inherit: false}" ui-sref="{{item.url}}"><span md-menu-align-target></span> {{item.title}} </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <h3 class="template-title" ng-hide="!template.title">
+                {{template.title}}
+            </h3>
+        </div>
+        <div id="content" ui-view="content" class="container"></div>
+    </md-content>
+</div>

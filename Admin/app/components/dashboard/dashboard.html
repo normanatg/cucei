@@ -1,0 +1,38 @@
+<div layout="row" layout-align="space-between">
+
+<md-input-container >
+    <md-select ng-model="opts.filter.limit" ng-change="updateDisplay()" placeholder="Registros">
+        <md-option value="3">3</md-option>
+        <md-option value="5">5</md-option>
+        <md-option value="10">10</md-option>
+        <md-option value="20">20</md-option>
+    </md-select>
+</md-input-container>
+</div>
+<div>
+    <input class="searchbar" ng-model="search" ng-change="searchLike()" placeholder="Buscar...">
+</div>
+<md-list class="md-list-border" style="overflow:scroll">
+    <md-list-item ng-repeat="den in dens" class="noright md-list-item-border">
+        <div layout="column" layout-gt-xs="row" flex="90" layout-align="space-between">
+            <div flex="25" layout="column" layout-align="center">
+                <span>{{ den.des}}</span>
+            </div>
+            <div flex="25" layout="column">
+                <img src="{{den.foto}}" style="width: 100px;height: 100px">
+            </div>
+            <div flex="25" layout="column" layout-align="center" >
+            	 <div ng-switch="den.estado">
+            	 	<div ng-switch-when="0">Pendiente</div>
+            	 </div>
+            </div>
+            <div flex="25" layout="column" layout-align="center">
+
+                <md-button class="md-raised md-cornered" ng-click="archiveDen(den.id)"> Solucionar </md-button>
+            </div>
+        </div>
+    </md-list-item>
+</md-list>
+<section layout="row" layout-padding="">
+    <cl-paging flex cl-pages="paging.total" , cl-steps="3" , cl-page-changed="paging.onPageChanged()" , cl-align="center center" , cl-current-page="paging.current"></cl-paging>
+</section>
